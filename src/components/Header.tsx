@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const WHATSAPP_LINK = "https://wa.me/558187928331";
+
 
 interface HeaderProps {
   onOpenQuiz?: () => void;

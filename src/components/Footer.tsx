@@ -1,6 +1,6 @@
 import { MapPin, Phone } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/558187928331";
+
 
 interface FooterProps {
   onOpenQuiz?: () => void;

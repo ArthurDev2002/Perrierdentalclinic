@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, UserCheck, Smile, Sparkles, PlusCircle } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/558187928331";
+
 
 const services = [
   {

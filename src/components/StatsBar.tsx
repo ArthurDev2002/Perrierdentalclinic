@@ -1,7 +1,15 @@
 import { motion, animate } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
-function Counter({ from, to, duration, decimals = 0, separator = '' }) {
+interface CounterProps {
+  from: number;
+  to: number;
+  duration: number;
+  decimals?: number;
+  separator?: string;
+}
+
+function Counter({ from, to, duration, decimals = 0, separator = '' }: CounterProps) {
   const nodeRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {

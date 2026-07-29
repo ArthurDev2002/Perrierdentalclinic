@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/558187928331";
+
 
 interface HeroProps {
   onOpenQuiz?: () => void;
