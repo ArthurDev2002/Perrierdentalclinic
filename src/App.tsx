@@ -12,6 +12,7 @@ import SpaceGallery from './components/SpaceGallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import QuizModal from './components/QuizModal';
+import FloatingChat from './components/FloatingChat';
 
 function App() {
   const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
@@ -38,6 +39,22 @@ function App() {
         isOpen={isQuizModalOpen} 
         onClose={() => setIsQuizModalOpen(false)} 
       />
+
+      <FloatingChat />
+
+      {/* Watermark DEMONSTRAÇÃO */}
+      <div className="fixed inset-0 pointer-events-none z-[9999] opacity-5">
+        <svg width="100%" height="100%">
+          <defs>
+            <pattern id="watermark" x="0" y="0" width="280" height="200" patternUnits="userSpaceOnUse">
+              <text x="140" y="100" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="900" fontSize="28" fill="black" transform="rotate(-35 140 100)">
+                DEMONSTRAÇÃO
+              </text>
+            </pattern>
+          </defs>
+          <rect x="0" y="0" width="100%" height="100%" fill="url(#watermark)" />
+        </svg>
+      </div>
     </div>
   );
 }
