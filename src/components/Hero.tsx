@@ -50,7 +50,7 @@ export default function Hero({ onOpenQuiz }: HeroProps) {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
               onClick={onOpenQuiz}
-              className="inline-flex justify-center items-center bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+              className="inline-flex justify-center items-center bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full text-base font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
             >
               Agendar minha Consulta
             </button>

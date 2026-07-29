@@ -203,7 +203,7 @@ export default function PatientsGallery({ onOpenQuiz }: PatientsGalleryProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex justify-center items-center bg-primary-500 hover:bg-primary-600 text-white px-10 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:-translate-y-1"
+            className="inline-flex justify-center items-center bg-primary-500 hover:bg-primary-600 text-white px-10 py-4 rounded-full text-base font-medium transition-all shadow-lg hover:-translate-y-1"
           >
             Quero transformar meu sorriso
           </motion.button>

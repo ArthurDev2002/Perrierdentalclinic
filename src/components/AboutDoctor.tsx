@@ -67,7 +67,7 @@ export default function AboutDoctor({ onOpenQuiz }: AboutDoctorProps) {
             <div className="pt-6 text-center md:text-left">
               <button
                 onClick={onOpenQuiz}
-                className="inline-flex justify-center items-center bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto"
+                className="inline-flex justify-center items-center bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full text-base font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto"
               >
                 Agendar Consulta com Dr. Rodrigo
               </button>

@@ -142,7 +142,7 @@ export default function QuizModal({ isOpen, onClose }: QuizModalProps) {
                     <button
                       onClick={handleNext}
                       disabled={!formData.name.trim()}
-                      className="w-full bg-primary-500 hover:bg-primary-600 disabled:bg-neutral-200 disabled:text-neutral-400 text-white py-4 rounded-xl font-medium text-lg transition-all"
+                      className="w-full bg-primary-500 hover:bg-primary-600 disabled:bg-neutral-200 disabled:text-neutral-400 text-white py-4 rounded-xl font-medium text-base transition-all"
                     >
                       Continuar
                     </button>
