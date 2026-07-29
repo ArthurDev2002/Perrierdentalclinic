@@ -135,12 +135,44 @@ export default function FloatingChat() {
   };
 
   const handleSendWhatsApp = () => {
+    let prefix1 = '';
+    let prefix2 = '';
+
+    switch (chatData.motivo) {
+      case 'Estética do sorriso':
+        prefix1 = '*O que busca:* ';
+        prefix2 = '*Avaliação anterior:* ';
+        break;
+      case 'Dor de dente / urgência':
+        prefix1 = '*Tempo de dor:* ';
+        prefix2 = '*Tipo de dor:* ';
+        break;
+      case 'Implante':
+        prefix1 = '*Qtd. de dentes:* ';
+        prefix2 = '*Situação do dente:* ';
+        break;
+      case 'Prótese':
+        prefix1 = '*Tipo de prótese:* ';
+        prefix2 = '*Uso atual:* ';
+        break;
+      case 'Avaliação de rotina':
+        prefix1 = '*Última consulta:* ';
+        prefix2 = '*Incômodo:* ';
+        break;
+      case 'Outro':
+        prefix1 = '*Detalhes:* ';
+        prefix2 = '*Urgência:* ';
+        break;
+    }
+
     let text = `Olá! Meu nome é *${chatData.nome}* e gostaria de agendar uma consulta.\n\n`;
-    if (chatData.motivo) text += `🦷 *Motivo:* ${chatData.motivo}\n`;
-    if (chatData.detalhe1) text += `🔹 ${chatData.detalhe1}\n`;
-    if (chatData.detalhe2) text += `🔹 ${chatData.detalhe2}\n`;
-    if (chatData.contatoPreferido) text += `📞 *Prefiro contato por:* ${chatData.contatoPreferido}\n`;
-    if (chatData.telefone) text += `📱 *Meu contato:* ${chatData.telefone}\n`;
+    if (chatData.motivo) {
+      text += `*Motivo:* ${chatData.motivo}\n`;
+      if (chatData.detalhe1) text += `  - ${prefix1}${chatData.detalhe1}\n`;
+      if (chatData.detalhe2) text += `  - ${prefix2}${chatData.detalhe2}\n`;
+    }
+    if (chatData.contatoPreferido) text += `*Prefiro contato por:* ${chatData.contatoPreferido}\n`;
+    if (chatData.telefone) text += `*Meu contato:* ${chatData.telefone}\n`;
     
     const encodedText = encodeURIComponent(text);
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`, '_blank');
