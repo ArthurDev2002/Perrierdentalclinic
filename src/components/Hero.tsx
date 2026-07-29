@@ -39,7 +39,7 @@ export default function Hero({ onOpenQuiz }: HeroProps) {
         >
 
 
-          <h1 className="text-4xl lg:text-5xl font-semibold font-heading text-neutral-900 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold font-heading text-neutral-900 leading-tight">
             Você sabe que precisa ir ao dentista. A pergunta é: <span className="text-primary-600 italic font-heading font-semibold">até quando vai deixar para depois?</span>
           </h1>
 
